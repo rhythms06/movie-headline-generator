@@ -127,7 +127,7 @@ $(document.body).ready(function () {
   });
 
   $('#showLine').on('click', function () {
-    $('#headline').text(randomActor + " to play " + randomRole + " in " + randomGenre + " Directed by " + randomDirector);
+    $('#headline').text(randomActor + " to Play " + randomRole + " in " + randomGenre + " Directed by " + randomDirector);
   });
 
 });
