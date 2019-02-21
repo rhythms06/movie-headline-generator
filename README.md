@@ -5,7 +5,7 @@ A tiny program inspired by [this Reddit comment](https://www.reddit.com/r/movies
 Technologies used: Python, HTML, CSS, JS, and jQuery.
 Credits: IMDb for supplying an easy-to-parse list of celebrities.
 
-# TODO
+## TODO
 * Narrow the actor and director datasets for maximum recognizability.
 * Widen the role and genre datasets for maximum weirdness.
 * Fix "undefined" bug.
