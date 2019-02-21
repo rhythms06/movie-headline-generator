@@ -91,6 +91,6 @@ $(document.body).ready(function () {
     }
   });
 
-  $('#headline').text(randomDirector);
+  $('#headline').text("HELLO");
 
 });
