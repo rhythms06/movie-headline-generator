@@ -91,6 +91,8 @@ $(document.body).ready(function () {
     }
   });
 
-  $('#headline').text("HELLO");
+  $('#showLine').on('click', function () {
+    $('#headline').text(randomDirector);
+  });
 
 });
