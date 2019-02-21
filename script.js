@@ -23,8 +23,8 @@ $(document.body).ready(function () {
     if (lines && lines.length) {
       $('#showLine').on('click', function () {
         randomNumberA = parseInt(Math.random() * lines.length);
-        // check to prevent infinite loop
-        if (lines.length === 1) { break; }
+        // // check to prevent infinite loop
+        // if (lines.length === 1) { break; }
         
         randomActor = lines[randomNumberA];
       });
@@ -43,8 +43,8 @@ $(document.body).ready(function () {
     if (lines && lines.length) {
       $('#showLine').on('click', function () {
         randomNumberR = parseInt(Math.random() * lines.length);
-        // check to prevent infinite loop
-        if (lines.length === 1) { break; }
+        // // check to prevent infinite loop
+        // if (lines.length === 1) { break; }
         
         randomRole = lines[randomNumberR];
       });
@@ -63,8 +63,8 @@ $(document.body).ready(function () {
     if (lines && lines.length) {
       $('#showLine').on('click', function () {
         randomNumberG = parseInt(Math.random() * lines.length);
-        // check to prevent infinite loop
-        if (lines.length === 1) { break; }
+        // // check to prevent infinite loop
+        // if (lines.length === 1) { break; }
         
         randomGenre = lines[randomNumberG];
       });
@@ -83,8 +83,8 @@ $(document.body).ready(function () {
     if (lines && lines.length) {
       $('#showLine').on('click', function () {
         randomNumberD = parseInt(Math.random() * lines.length);
-        // check to prevent infinite loop
-        if (lines.length === 1) { break; }
+        // // check to prevent infinite loop
+        // if (lines.length === 1) { break; }
         
         randomDirector = lines[randomNumberD];
       });
