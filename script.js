@@ -1,5 +1,5 @@
-// var lines;
-// var randomNumberA;
+var lines;
+var randomNumberA;
 // var randomActor;
 // var randomNumberR;
 // var randomRole;
@@ -7,7 +7,7 @@
 // var randomGenre;
 // var randomNumberD;
 // var randomDirector;
-// var lastRandomNumber;
+var lastRandomNumber;
 
 $(document.body).ready(function () {
   
