@@ -5,5 +5,7 @@ with open('imdb_names_02_21_19.tsv') as tsvfile:
 	file = open("directors.txt", "w")
 	for row in reader:
 		job = row['primaryProfession']
-		if(job[0:8] == 'director'):
+		birth = row['birthYear']
+		death = row['deathYear']
+		if(job[0:8] == 'director' and death[0:2] == '\N' and birth[0:2] != '\N'):
 			file.write("%s\n" % row['primaryName'])
