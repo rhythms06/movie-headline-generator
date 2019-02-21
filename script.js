@@ -15,6 +15,7 @@ $(document.body).ready(function () {
     url: "actors.txt",
     async: true,
     success: function (content) {
+      console.log("Found the actor database, parsing...");
       // normalize the line breaks, then split into lines
       lines = content.replace(/\r\n|\r/g, '\n').trim().split('\n');
     
@@ -42,6 +43,7 @@ $(document.body).ready(function () {
       url: "roles.txt",
       async: true,
       success: function () {
+        console.log("Found the role database, parsing...");
         // normalize the line breaks, then split into lines
         lines = content.replace(/\r\n|\r/g, '\n').trim().split('\n');
             
@@ -69,6 +71,7 @@ $(document.body).ready(function () {
       url: "genres.txt",
       async: true,
       success: function () {
+        console.log("Found the genre database, parsing...");
         // normalize the line breaks, then split into lines
         lines = content.replace(/\r\n|\r/g, '\n').trim().split('\n');
           
@@ -96,6 +99,7 @@ $(document.body).ready(function () {
       url: "directors.txt",
       async: true,
       success: function () {
+        console.log("Found the director database, parsing...");
         // normalize the line breaks, then split into lines
         lines = content.replace(/\r\n|\r/g, '\n').trim().split('\n');
     
