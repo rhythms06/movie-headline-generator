@@ -29,12 +29,12 @@ $(document.body).ready(function () {
           randomActor = lines[randomNumberA];
         });
       }
-    },
-    error: function(e) {
-        var errorMsg = e? (e.status + ' ' + e.statusText) : "";
-        console.log(errorMsg);
-    },
-    dataType: "text"
+    }
+    // error: function(e) {
+        // var errorMsg = e? (e.status + ' ' + e.statusText) : "";
+        // console.log(errorMsg);
+    // },
+    // dataType: "text"
   });
 
 
@@ -58,12 +58,12 @@ $(document.body).ready(function () {
           });
         }
       }
-    },
-    error: function(e) {
-      var errorMsg = e? (e.status + ' ' + e.statusText) : "";
-      console.log(errorMsg);
-    },
-    dataType: "text"
+    }
+    // error: function(e) {
+    //   var errorMsg = e? (e.status + ' ' + e.statusText) : "";
+    //   console.log(errorMsg);
+    // },
+    // dataType: "text"
   });
 
   $.when(loadFile2).then(function(){
@@ -86,12 +86,12 @@ $(document.body).ready(function () {
           });
         }
       }
-    },
-    error: function(e) {
-      var errorMsg = e? (e.status + ' ' + e.statusText) : "";
-      console.log(errorMsg);
-    },
-    dataType: "text"
+    }
+    // error: function(e) {
+    //   var errorMsg = e? (e.status + ' ' + e.statusText) : "";
+    //   console.log(errorMsg);
+    // },
+    // dataType: "text"
   });
 
   $.when(loadFile3).then(function(){
@@ -114,12 +114,12 @@ $(document.body).ready(function () {
           });
         }
       }
-    },
-    error: function(e) {
-      var errorMsg = e? (e.status + ' ' + e.statusText) : "";
-      console.log(errorMsg);
-    },
-    dataType: "text"
+    }
+    // error: function(e) {
+    //   var errorMsg = e? (e.status + ' ' + e.statusText) : "";
+    //   console.log(errorMsg);
+    // },
+    // dataType: "text"
   });
 
   $('#showLine').on('click', function () {
