@@ -10,85 +10,112 @@ var randomDirector;
 var lastRandomNumber;
 
 $(document.body).ready(function () {
-  
-  // load the trivia from the server
-  $.ajax({
-    url: 'actors.txt'
-  }).done(function(content) {
+
+  var loadFile1 = $.ajax({
+    url: "actors.txt",
+    async: true,
+    success: function (content) {
+      // normalize the line breaks, then split into lines
+      lines = content.replace(/\r\n|\r/g, '\n').trim().split('\n');
     
-    // normalize the line breaks, then split into lines
-    lines = content.replace(/\r\n|\r/g, '\n').trim().split('\n');
-    
-    // only set up the click handler if there were lines found
-    if (lines && lines.length) {
-      $('#showLine').on('click', function () {
-        randomNumberA = parseInt(Math.random() * lines.length);
-        // // check to prevent infinite loop
-        // if (lines.length === 1) { break; }
-        
-        randomActor = lines[randomNumberA];
-      });
-    }
+      // only set up the click handler if there were lines found
+      if (lines && lines.length) {
+        $('#showLine').on('click', function () {
+          randomNumberA = parseInt(Math.random() * lines.length);
+          // // check to prevent infinite loop
+          // if (lines.length === 1) { break; }
+          
+          randomActor = lines[randomNumberA];
+        });
+      }
+    },
+    error: function(e) {
+        var errorMsg = e? (e.status + ' ' + e.statusText) : "";
+        console.log(errorMsg);
+    },
+    dataType: "text"
   });
 
-  // load the trivia from the server
-  $.ajax({
-    url: 'roles.txt'
-  }).done(function(content) {
-    
-    // normalize the line breaks, then split into lines
-    lines = content.replace(/\r\n|\r/g, '\n').trim().split('\n');
-    
-    // only set up the click handler if there were lines found
-    if (lines && lines.length) {
-      $('#showLine').on('click', function () {
-        randomNumberR = parseInt(Math.random() * lines.length);
-        // // check to prevent infinite loop
-        // if (lines.length === 1) { break; }
-        
-        randomRole = lines[randomNumberR];
-      });
-    }
+
+  $.when(loadFile1).then(function(){
+    var loadFile2 = $.ajax({
+      url: "roles.txt",
+      async: true,
+      success: function () {
+        // normalize the line breaks, then split into lines
+        lines = content.replace(/\r\n|\r/g, '\n').trim().split('\n');
+            
+        // only set up the click handler if there were lines found
+        if (lines && lines.length) {
+          $('#showLine').on('click', function () {
+            randomNumberR = parseInt(Math.random() * lines.length);
+            // // check to prevent infinite loop
+            // if (lines.length === 1) { break; }
+                
+            randomRole = lines[randomNumberR];
+          });
+        }
+      }
+    },
+    error: function(e) {
+      var errorMsg = e? (e.status + ' ' + e.statusText) : "";
+      console.log(errorMsg);
+    },
+    dataType: "text"
   });
 
-  // load the trivia from the server
-  $.ajax({
-    url: 'genres.txt'
-  }).done(function(content) {
-    
-    // normalize the line breaks, then split into lines
-    lines = content.replace(/\r\n|\r/g, '\n').trim().split('\n');
-    
-    // only set up the click handler if there were lines found
-    if (lines && lines.length) {
-      $('#showLine').on('click', function () {
-        randomNumberG = parseInt(Math.random() * lines.length);
-        // // check to prevent infinite loop
-        // if (lines.length === 1) { break; }
-        
-        randomGenre = lines[randomNumberG];
-      });
-    }
+  $.when(loadFile2).then(function(){
+    var loadFile3 = $.ajax({
+      url: "genres.txt",
+      async: true,
+      success: function () {
+        // normalize the line breaks, then split into lines
+        lines = content.replace(/\r\n|\r/g, '\n').trim().split('\n');
+          
+        // only set up the click handler if there were lines found
+        if (lines && lines.length) {
+          $('#showLine').on('click', function () {
+            randomNumberG = parseInt(Math.random() * lines.length);
+            // // check to prevent infinite loop
+            // if (lines.length === 1) { break; }
+              
+            randomGenre = lines[randomNumberG];
+          });
+        }
+      }
+    },
+    error: function(e) {
+      var errorMsg = e? (e.status + ' ' + e.statusText) : "";
+      console.log(errorMsg);
+    },
+    dataType: "text"
   });
 
-  // load the trivia from the server
-  $.ajax({
-    url: 'directors.txt'
-  }).done(function(content) {
+  $.when(loadFile3).then(function(){
+    var loadFile4 = $.ajax({
+      url: "directors.txt",
+      async: true,
+      success: function () {
+        // normalize the line breaks, then split into lines
+        lines = content.replace(/\r\n|\r/g, '\n').trim().split('\n');
     
-    // normalize the line breaks, then split into lines
-    lines = content.replace(/\r\n|\r/g, '\n').trim().split('\n');
-    
-    // only set up the click handler if there were lines found
-    if (lines && lines.length) {
-      $('#showLine').on('click', function () {
-        randomNumberD = parseInt(Math.random() * lines.length);
-        // // check to prevent infinite loop
-        // if (lines.length === 1) { break; }
-        
-        randomDirector = lines[randomNumberD];
-      });
-    }
+        // only set up the click handler if there were lines found
+        if (lines && lines.length) {
+          $('#showLine').on('click', function () {
+            randomNumberD = parseInt(Math.random() * lines.length);
+            // // check to prevent infinite loop
+            // if (lines.length === 1) { break; }
+            
+            randomDirector = lines[randomNumberD];
+          });
+        }
+      }
+    },
+    error: function(e) {
+      var errorMsg = e? (e.status + ' ' + e.statusText) : "";
+      console.log(errorMsg);
+    },
+    dataType: "text"
   });
 
   $('#showLine').on('click', function () {
