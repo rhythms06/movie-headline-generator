@@ -42,7 +42,7 @@ $(document.body).ready(function () {
     var loadFile2 = $.ajax({
       url: "roles.txt",
       async: true,
-      success: function () {
+      success: function (content) {
         console.log("Found the role database, parsing...");
         // normalize the line breaks, then split into lines
         lines = content.replace(/\r\n|\r/g, '\n').trim().split('\n');
@@ -70,7 +70,7 @@ $(document.body).ready(function () {
     var loadFile3 = $.ajax({
       url: "genres.txt",
       async: true,
-      success: function () {
+      success: function (content) {
         console.log("Found the genre database, parsing...");
         // normalize the line breaks, then split into lines
         lines = content.replace(/\r\n|\r/g, '\n').trim().split('\n');
@@ -98,7 +98,7 @@ $(document.body).ready(function () {
     var loadFile4 = $.ajax({
       url: "directors.txt",
       async: true,
-      success: function () {
+      success: function (content) {
         console.log("Found the director database, parsing...");
         // normalize the line breaks, then split into lines
         lines = content.replace(/\r\n|\r/g, '\n').trim().split('\n');
