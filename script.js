@@ -29,7 +29,7 @@ $(document.body).ready(function () {
           randomActor = lines[randomNumberA];
         });
       }
-    });
+    }
     // error: function(e) {
         // var errorMsg = e? (e.status + ' ' + e.statusText) : "";
         // console.log(errorMsg);
