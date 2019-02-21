@@ -1,32 +1,34 @@
-var lines;
+var linesA;
 var randomNumberA;
 var randomActor;
+var linesR;
 var randomNumberR;
 var randomRole;
+var linesG;
 var randomNumberG;
 var randomGenre;
+var linesD;
 var randomNumberD;
 var randomDirector;
-var lastRandomNumber;
 
 $(document.body).ready(function () {
 
   var loadFile1 = $.ajax({
     url: "actors.txt",
     async: true,
-    success: function (content) {
+    success: function (contentA) {
       console.log("Found the actor database, parsing...");
       // normalize the line breaks, then split into lines
-      lines = content.replace(/\r\n|\r/g, '\n').trim().split('\n');
+      linesA = contentA.replace(/\r\n|\r/g, '\n').trim().split('\n');
     
       // only set up the click handler if there were lines found
-      if (lines && lines.length) {
+      if (linesA && linesA.length) {
         $('#showLine').on('click', function () {
-          randomNumberA = parseInt(Math.random() * lines.length);
+          randomNumberA = parseInt(Math.random() * linesA.length);
           // // check to prevent infinite loop
           // if (lines.length === 1) { break; }
           
-          randomActor = lines[randomNumberA];
+          randomActor = linesA[randomNumberA];
         });
       }
     }
@@ -42,19 +44,19 @@ $(document.body).ready(function () {
     var loadFile2 = $.ajax({
       url: "roles.txt",
       async: true,
-      success: function (content) {
+      success: function (contentR) {
         console.log("Found the role database, parsing...");
         // normalize the line breaks, then split into lines
-        lines = content.replace(/\r\n|\r/g, '\n').trim().split('\n');
+        linesR = contentR.replace(/\r\n|\r/g, '\n').trim().split('\n');
             
         // only set up the click handler if there were lines found
-        if (lines && lines.length) {
+        if (linesR && linesR.length) {
           $('#showLine').on('click', function () {
-            randomNumberR = parseInt(Math.random() * lines.length);
+            randomNumberR = parseInt(Math.random() * linesR.length);
             // // check to prevent infinite loop
             // if (lines.length === 1) { break; }
                 
-            randomRole = lines[randomNumberR];
+            randomRole = linesR[randomNumberR];
           });
         }
       }
@@ -70,19 +72,19 @@ $(document.body).ready(function () {
       var loadFile3 = $.ajax({
         url: "genres.txt",
         async: true,
-        success: function (content) {
+        success: function (contentG) {
           console.log("Found the genre database, parsing...");
           // normalize the line breaks, then split into lines
-          lines = content.replace(/\r\n|\r/g, '\n').trim().split('\n');
+          linesG = contentG.replace(/\r\n|\r/g, '\n').trim().split('\n');
             
           // only set up the click handler if there were lines found
-          if (lines && lines.length) {
+          if (linesG && linesG.length) {
             $('#showLine').on('click', function () {
-              randomNumberG = parseInt(Math.random() * lines.length);
+              randomNumberG = parseInt(Math.random() * linesG.length);
               // // check to prevent infinite loop
               // if (lines.length === 1) { break; }
                 
-              randomGenre = lines[randomNumberG];
+              randomGenre = linesG[randomNumberG];
             });
           }
         }
@@ -98,19 +100,19 @@ $(document.body).ready(function () {
         var loadFile4 = $.ajax({
           url: "directors.txt",
           async: true,
-          success: function (content) {
+          success: function (contentD) {
             console.log("Found the director database, parsing...");
             // normalize the line breaks, then split into lines
-            lines = content.replace(/\r\n|\r/g, '\n').trim().split('\n');
+            linesD = contentD.replace(/\r\n|\r/g, '\n').trim().split('\n');
         
             // only set up the click handler if there were lines found
-            if (lines && lines.length) {
+            if (linesD && linesD.length) {
               $('#showLine').on('click', function () {
-                randomNumberD = parseInt(Math.random() * lines.length);
+                randomNumberD = parseInt(Math.random() * linesD.length);
                 // // check to prevent infinite loop
                 // if (lines.length === 1) { break; }
                 
-                randomDirector = lines[randomNumberD];
+                randomDirector = linesD[randomNumberD];
               });
             }
           }
