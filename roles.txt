@@ -11,11 +11,11 @@ Batman
 Cassie
 Chanakya
 Charles Surface
-Cop
+a Cop
 Daggubati Purandhareswari
 Deranged Stalker
 Dick Cheney
-Dream Role
+their Dream Role
 Fred Durst
 Fred Rogers
 Gretchen Carlson
@@ -24,7 +24,7 @@ Hugh Hefner
 Hulk Hogan
 Indiana Jones
 Infortunatov
-inventor Nikola Tesla
+Inventor Nikola Tesla
 Jafar
 John Proctor
 King Kamehameha
@@ -58,5 +58,5 @@ the Protagonist
 the Revolutionary Tina Modotti
 the Title Role
 the Wizard
-twins
-Unconventional Relationship Counselors
+Twins
+an Unconventional Relationship Counselor
